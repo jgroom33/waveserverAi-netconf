@@ -1,1 +1,13 @@
-#
+<edit-config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <target>
+    <running/>
+  </target>
+  <config>
+    <waveserver-aaa xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-aaa"
+                    xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+      <user operation="delete">
+        <user-name>temp</user-name>
+      </user>
+    </waveserver-aaa>
+  </config>
+</edit-config>
