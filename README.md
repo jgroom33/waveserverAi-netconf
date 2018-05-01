@@ -4,8 +4,10 @@ A curated collection of Netconf executions to Waveserver Ai
 
 ## Dependencies
 
+[netconf-console](https://pypi.org/project/netconf-console/)
+
 ```bash
-pip install netconf-console
+pip install netconf-console --user
 ```
 
 ## Usage
@@ -13,7 +15,7 @@ pip install netconf-console
 ```bash
 NETCONF_HOST=10.132.241.92
 NETCONF_USER=su
-NETCONF_PW=ciena
+NETCONF_PW=su
 ```
 
 ### Hello
@@ -29,6 +31,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 Commands print their output to output.xml
 
+rpc located: [get-alarms.xml](alarm/get-alarms.xml)
+
 ```bash
 # Get Alarms
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > output.xml
@@ -37,6 +41,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ### PMs
 
 Commands print their output to output.xml
+
+rpc located: [pm](pm)
 
 ```bash
 # Get Ethernet
@@ -55,12 +61,16 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 ### Chassis
 
+rpc located: [chassis/lamp-test](chassis/lamp-test)
+
 ```bash
 # Disable Access Panel
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml
 # Enable Access Panel
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml
 ```
+
+rpc located: [chassis](chassis)
 
 ```bash
 # Restart Waveserver Ai
@@ -70,6 +80,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ```
 
 ### Software upgrade
+
+rpc located: [software](software)
 
 ```bash
 # Install (Download, Activate, Commit) software from URL
