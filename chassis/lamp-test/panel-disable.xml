@@ -1,0 +1,15 @@
+<edit-config>
+    <target>
+        <running/>
+    </target>
+    <config>
+        <waveserver-chassis xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-chassis"
+                            xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <access-panel>
+            <state>
+            <admin-state>disabled</admin-state>
+            </state>
+        </access-panel>
+        </waveserver-chassis>
+    </config>
+</edit-config>

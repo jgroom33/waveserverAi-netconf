@@ -1,0 +1,3 @@
+<software:waveserver-software-install xmlns:software="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-software">
+    <software:url>https://foo.bar/ws123.tar</software:url>
+</software:waveserver-software-install>
