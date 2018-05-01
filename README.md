@@ -7,7 +7,7 @@ A curated collection of Netconf executions to Waveserver Ai
 [netconf-console](https://pypi.org/project/netconf-console/)
 
 ```bash
-pip install netconf-console --user
+pip install netconf-console
 ```
 
 ## Usage
