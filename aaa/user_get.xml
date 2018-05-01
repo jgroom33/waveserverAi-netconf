@@ -1,0 +1,10 @@
+<get-config>
+  <source>
+    <running/>
+  </source>
+  <filter type="subtree">
+    <aaa:waveserver-aaa xmlns:aaa="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-aaa">
+      <aaa:user/>
+    </aaa:waveserver-aaa>
+  </filter>
+</get-config>

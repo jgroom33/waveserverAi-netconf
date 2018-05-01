@@ -2,15 +2,13 @@
 
 A curated collection of Netconf executions to Waveserver Ai
 
-## Instructions
-
-### Dependencies
+## Dependencies
 
 ```bash
 pip install netconf-console
 ```
 
-### Usage
+## Usage
 
 ```bash
 NETCONF_HOST=10.132.241.92
@@ -18,7 +16,7 @@ NETCONF_USER=su
 NETCONF_PW=ciena
 ```
 
-#### Hello
+### Hello
 
 Quick test to make sure you are connecting
 
@@ -27,7 +25,7 @@ Quick test to make sure you are connecting
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
 ```
 
-#### Alarms
+### Alarms
 
 Commands print their output to output.xml
 
@@ -36,7 +34,7 @@ Commands print their output to output.xml
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > output.xml
 ```
 
-#### PMs
+### PMs
 
 Commands print their output to output.xml
 
@@ -55,15 +53,13 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > output.xml
 ```
 
-#### Chassis
-
-Commands print their output to output.xml
+### Chassis
 
 ```bash
 # Disable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml > output.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml
 # Enable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml > output.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml
 ```
 
 ```bash
@@ -73,11 +69,36 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > output.xml
 ```
 
-#### Software upgrade
-
-Commands print their output to output.xml
+### Software upgrade
 
 ```bash
 # Install (Download, Activate, Commit) software from URL
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/install.xml > output.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/install.xml
+```
+
+### System
+
+```bash
+# NTP disable
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_disable.xml
+# NTP enable
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_enable.xml
+# NTP get
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
+```
+
+```bash
+# NTP disable
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_set.xml
+# NTP enable
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_get.xml
+```
+
+### AAA
+
+```bash
+# User get
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_get.xml
+# user create
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
 ```

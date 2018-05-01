@@ -1,0 +1,16 @@
+<edit-config>
+<target>
+    <running/>
+</target>
+<config>
+    <waveserver-aaa xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-aaa"
+                    xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+    <user>
+        <user-name>temp</user-name>
+        <password>temp</password>
+        <secret/>
+        <access-level>super</access-level>
+    </user>
+    </waveserver-aaa>
+</config>
+</edit-config>
