@@ -7,7 +7,7 @@ A curated collection of Netconf executions to Waveserver Ai
 ### Dependencies
 
 ```bash
-pip install netconf-console
+pip install netconf-console --user
 ```
 
 ### Usage
@@ -15,7 +15,7 @@ pip install netconf-console
 ```bash
 NETCONF_HOST=10.132.241.92
 NETCONF_USER=su
-NETCONF_PW=ciena
+NETCONF_PW=su
 ```
 
 #### Hello
