@@ -33,6 +33,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 Commands print their output to output.xml
 
+rpc located: [get-alarms.xml](alarm/get-alarms.xml)
+
 ```bash
 # Get Alarms
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > output.xml
@@ -41,6 +43,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 #### PMs
 
 Commands print their output to output.xml
+
+rpc located: [pm](pm)
 
 ```bash
 # Get Ethernet
@@ -61,12 +65,16 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 Commands print their output to output.xml
 
+rpc located: [chassis/lamp-test](chassis/lamp-test)
+
 ```bash
 # Disable Access Panel
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml > output.xml
 # Enable Access Panel
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml > output.xml
 ```
+
+rpc located: [chassis](chassis)
 
 ```bash
 # Restart Waveserver Ai
@@ -78,6 +86,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 #### Software upgrade
 
 Commands print their output to output.xml
+
+rpc located: [software](software)
 
 ```bash
 # Install (Download, Activate, Commit) software from URL
