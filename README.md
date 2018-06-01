@@ -6,6 +6,8 @@ A curated collection of Netconf executions to Waveserver Ai
 
 ### Dependencies
 
+[netconf-console](https://pypi.org/project/netconf-console/)
+
 ```bash
 pip install netconf-console --user
 ```
