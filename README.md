@@ -129,7 +129,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Configuration delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-delete.xml
 ```
-### Configuration
+### Licenses
 
 ```bash
 # get license
