@@ -1,0 +1,18 @@
+<configuration:waveserver-configuration-install xmlns:configuration="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-configuration"
+                                                xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <configuration:filename>/var/opt/flash0/config/Myconfig1</configuration:filename>
+  <configuration:server-to-use>none</configuration:server-to-use>
+  <configuration:tftp-server-address>x</configuration:tftp-server-address>
+  <configuration:ftp-server-address>x</configuration:ftp-server-address>
+  <configuration:ftp-login-id>x</configuration:ftp-login-id>
+  <configuration:ftp-password>x</configuration:ftp-password>
+  <configuration:ftp-secret>x</configuration:ftp-secret>
+  <configuration:sftp-server-address>x</configuration:sftp-server-address>
+  <configuration:sftp-login-id>x</configuration:sftp-login-id>
+  <configuration:sftp-password>x</configuration:sftp-password>
+  <configuration:sftp-secret>x</configuration:sftp-secret>
+  <configuration:scp-server-address>x</configuration:scp-server-address>
+  <configuration:scp-login-id>x</configuration:scp-login-id>
+  <configuration:scp-password>x</configuration:scp-password>
+  <configuration:scp-secret>x</configuration:scp-secret>
+</configuration:waveserver-configuration-install>

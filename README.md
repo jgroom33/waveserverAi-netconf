@@ -13,7 +13,7 @@ pip install netconf-console
 ## Usage
 
 ```bash
-NETCONF_HOST=10.132.241.92
+NETCONF_HOST=10.181.67.111
 NETCONF_USER=su
 NETCONF_PW=su
 ```
@@ -115,4 +115,25 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
 # user delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
+```
+
+### Configuration
+
+```bash
+# Configuration  save
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-save.xml
+# Configuration install
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-install.xml
+# Configuration reset to user config
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-reset-to-user-config.xml
+# Configuration delete
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-delete.xml
+```
+### Configuration
+
+```bash
+# get license
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
+# Activate license *note license file needed to be update on xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=/license/activate-license-file.xml
 ```

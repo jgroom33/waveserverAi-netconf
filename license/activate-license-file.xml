@@ -1,0 +1,4 @@
+<license:waveserver-license-file-activate xmlns:license="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-license"
+                                          xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <license:filename>x</license:filename>
+</license:waveserver-license-file-activate>
