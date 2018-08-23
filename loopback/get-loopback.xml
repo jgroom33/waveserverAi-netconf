@@ -1,0 +1,14 @@
+<get-config>
+    <source>
+      <running/>
+    </source>
+    <filter type="subtree">
+      <port:waveserver-ports xmlns:port="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port">
+        <port:ports>
+          <port:properties>
+            <port:loopback/>
+          </port:properties>
+        </port:ports>
+      </port:waveserver-ports>
+    </filter>
+  </get-config>
