@@ -156,7 +156,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # user delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
 ```
-### User Loopback
+### Loopback
 rpc located: [loopback](loopback)
 
 ```bash
