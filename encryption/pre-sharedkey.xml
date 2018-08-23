@@ -1,0 +1,54 @@
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-ports xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port"
+                        xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <ports>
+          <port-id>2-1</port-id>
+          <channels>
+            <channel-id>1</channel-id>
+            <properties>
+              <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
+                <pre-shared-key>
+                  <description>hex16.psk</description>
+                </pre-shared-key>
+              </encryption>
+            </properties>
+          </channels>
+          <channels>
+            <channel-id>2</channel-id>
+            <properties>
+              <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
+                <pre-shared-key>
+                  <description>hex64.psk</description>
+                </pre-shared-key>
+              </encryption>
+            </properties>
+          </channels>
+          <channels>
+            <channel-id>3</channel-id>
+            <properties>
+              <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
+                <pre-shared-key>
+                  <description/>
+                </pre-shared-key>
+              </encryption>
+            </properties>
+          </channels>
+          <channels>
+            <channel-id>4</channel-id>
+            <properties>
+              <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
+                <pre-shared-key>
+                  <description>ravipandey</description>
+                  <value>12345678912345678912345678912345</value>
+                </pre-shared-key>
+              </encryption>
+            </properties>
+          </channels>
+        </ports>
+      </waveserver-ports>
+    </config>
+  </edit-config>

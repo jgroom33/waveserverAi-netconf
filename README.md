@@ -27,67 +27,6 @@ Quick test to make sure you are connecting
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
 ```
 
-### Alarms
-
-Commands print their output to output.xml
-
-rpc located: [get-alarms.xml](alarm/get-alarms.xml)
-
-```bash
-# Get Alarms
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > output.xml
-```
-
-### PMs
-
-Commands print their output to output.xml
-
-rpc located: [pm](pm)
-
-```bash
-# Get Ethernet
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml > output.xml
-# Get Modem PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml > output.xml
-# Get ODU PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml > output.xml
-# Get OTU PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml > output.xml
-# Get optical PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml > output.xml
-# Get PM Config
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > output.xml
-```
-
-### Chassis
-
-rpc located: [chassis/lamp-test](chassis/lamp-test)
-
-```bash
-# Disable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml
-# Enable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml
-```
-
-rpc located: [chassis](chassis)
-
-```bash
-# Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart.xml > output.xml
-# Cold Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > output.xml
-```
-
-### Software upgrade
-
-rpc located: [software](software)
-
-```bash
-# Install (Download, Activate, Commit) software from URL
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/install.xml
-```
-
 ### System
 
 ```bash
@@ -98,23 +37,30 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # NTP get
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
 ```
-
+### Date and Time  
 ```bash
-# NTP disable
+# Set Date and Time  
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_set.xml
-# NTP enable
+# Get Date and Time  
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_get.xml
 ```
 
-### AAA
+### Licenses
 
 ```bash
-# User get
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_get.xml
-# user create
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
-# user delete
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
+# get license
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
+# Activate license *note license file needed to be update on xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=/license/activate-license-file.xml
+```
+
+### Software upgrade
+
+rpc located: [software](software)
+
+```bash
+# Install (Download, Activate, Commit) software from URL
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/install.xml
 ```
 
 ### Configuration
@@ -129,11 +75,81 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Configuration delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-delete.xml
 ```
-### Licenses
+### Encryption
+Commands print their output to getsharedkey.xml
+
+rpc located: [encryption](encryption)
 
 ```bash
-# get license
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
-# Activate license *note license file needed to be update on xml
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=/license/activate-license-file.xml
+# Setup Pre-Shared Key
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/pre-sharedkey.xml
+# Get Pre-Shared Key
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-presharedkey.xml > getsharedkey.xml
+```
+### Warm and Cold Restart
+
+Commands print their output to restart.xml
+
+rpc located: [chassis](chassis)
+
+```bash
+# Restart Waveserver Ai
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart.xml > restart.xml
+# Cold Restart Waveserver Ai
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > restart.xml
+```
+
+### Alarms
+
+Commands print their output to alarms.xml
+
+rpc located: [get-alarms.xml](alarm/get-alarms.xml)
+
+```bash
+# Get Alarms
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > alarms.xml
+```
+
+### PMs
+
+Commands print their output to output.xml
+
+rpc located: [pm](pm)
+
+```bash
+# Get Ethernet
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml > ethernet-pm.xml
+# Get Modem PMs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml > modem-pm.xml
+# Get ODU PMs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml > odu-pm.xml
+# Get OTU PMs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml > otu-pm.xml
+# Get optical PMs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml > optical-pm.xml
+# Get PM Config
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > pm-config.xml
+```
+
+### Lamp Test
+
+rpc located: [chassis/lamp-test](chassis/lamp-test)
+
+```bash
+# Disable Access Panel
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml
+# Enable Access Panel
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml
+```
+
+
+### User Get/Create/Delete
+
+```bash
+# User get
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_get.xml
+# user create
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
+# user delete
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
 ```
