@@ -28,6 +28,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ```
 
 ### System
+rpc located: [system](system)
 
 ```bash
 # NTP disable
@@ -38,6 +39,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
 ```
 ### Date and Time  
+rpc located: [system](system)
 ```bash
 # Set Date and Time  
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_set.xml
@@ -46,7 +48,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ```
 
 ### Licenses
-
+rpc located: [license](license)
 ```bash
 # get license
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
@@ -64,7 +66,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ```
 
 ### Configuration
-
+rpc located: [configuration](configuration)
 ```bash
 # Configuration  save
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-save.xml
@@ -103,7 +105,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 Commands print their output to alarms.xml
 
-rpc located: [get-alarms.xml](alarm/get-alarms.xml)
+rpc located: [alarm](alarm)
 
 ```bash
 # Get Alarms
@@ -144,6 +146,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 
 ### User Get/Create/Delete
+rpc located: [aaa](aaa)
 
 ```bash
 # User get
@@ -152,4 +155,19 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
 # user delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
+```
+### User Loopback
+rpc located: [loopback](loopback)
+
+```bash
+# Disable Loopback
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-disable.xml
+# Disable Loopback
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/disable-loopback.xml
+# Rx Loopback
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/rx-loopback.xml
+# Tx Loopback
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/tx-loopback.xml
+# Get Loopback
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml > loopback.xml
 ```
