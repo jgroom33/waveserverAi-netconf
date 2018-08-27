@@ -1,0 +1,3 @@
+  <mod:waveserver-module-restart xmlns:mod="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-module">
+    <mod:module-id>2</mod:module-id>
+  </mod:waveserver-module-restart>

@@ -1,0 +1,17 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-snmp xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-snmp"
+                       xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <community>
+          <index>t0000002</index>
+          <community-name>private</community-name>
+          <security-name>private</security-name>
+          <transport-tag>anywhereTag</transport-tag>
+          <context-name>test</context-name>
+        </community>
+      </waveserver-snmp>
+    </config>
+  </edit-config>

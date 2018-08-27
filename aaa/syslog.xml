@@ -1,0 +1,32 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-logging xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-logging"
+                          xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <syslog>
+          <global-config>
+            <admin-state>enabled</admin-state>
+            <defaults>
+              <port>514</port>
+              <custom-prefix/>
+              <facility>3</facility>
+              <severity>emergency alert</severity>
+            </defaults>
+          </global-config>
+          <collector>
+            <address>10.176.110.237</address>
+            <admin-state>enabled</admin-state>
+            <config>
+              <port>514</port>
+              <custom-prefix></custom-prefix>
+              <facility>3</facility>
+              <severity></severity>
+            </config>
+          </collector>
+        </syslog>
+      </waveserver-logging>
+    </config>
+</edit-config>
+

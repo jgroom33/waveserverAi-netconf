@@ -88,7 +88,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Get Pre-Shared Key
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-presharedkey.xml > getsharedkey.xml
 ```
-### Warm and Cold Restart
+### Warm and Cold Restart Chassis
 
 Commands print their output to restart.xml
 
@@ -100,7 +100,18 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Cold Restart Waveserver Ai
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > restart.xml
 ```
+### Warm and Cold Restart Modules
 
+Commands print their output to restart.xml
+
+rpc located: [module](module)
+
+```bash
+# Cold Restart Waveserver Ai
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-cold-restart.xml > restart.xml
+# Warm Restart Waveserver Ai
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-warm-restart.xml > restart.xml
+```
 ### Alarms
 
 Commands print their output to alarms.xml
@@ -155,6 +166,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
 # user delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
+# Set SysLog
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/syslog.xml
 ```
 ### Loopback
 rpc located: [loopback](loopback)
@@ -172,4 +185,19 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml > loopback.xml
 # Enable Port
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-enable.xml
+```
+### SNMP
+rpc located: [snmp](snmp)
+
+```bash
+# Set SNMP Target
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/snmptarget.xml
+# Set SNMP community
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/setcommunity.xml
+# Set SNMP Target-params
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/setsnmptarget-params.xml
+# Set SNMP Create
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/snmpcreate.xml
+# Set SNMP get
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/snmpget.xml
 ```

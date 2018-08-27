@@ -1,0 +1,16 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-snmp xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-snmp"
+                       xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <target-params>
+          <name>public-v2c</name>
+          <security-name>public</security-name>
+          <security-model>v2c</security-model>
+          <security-level>no-auth-no-priv</security-level>
+        </target-params>
+      </waveserver-snmp>
+    </config>
+</edit-config>
