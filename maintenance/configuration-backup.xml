@@ -1,0 +1,5 @@
+<configuration:waveserver-configuration-backup xmlns:configuration="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-configuration">
+    <configuration:filename>x</configuration:filename>
+    <configuration:strip-user-comments>true</configuration:strip-user-comments>
+    <configuration:include-default-settings>true</configuration:include-default-settings>
+  </configuration:waveserver-configuration-backup>
