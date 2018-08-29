@@ -13,7 +13,7 @@ pip install netconf-console
 ## Usage
 
 ```bash
-NETCONF_HOST=10.181.67.111
+NETCONF_HOST=10.181.36.238
 NETCONF_USER=su
 NETCONF_PW=su
 ```
@@ -177,7 +177,7 @@ rpc located: [port](port)
 
 ```bash
 # Get Ports
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml > getportoutput.xml
 # Set Ethernet properties
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setethernetproperties.xml
 # Set OTN properties
@@ -194,6 +194,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/none-portconditioning.xml
 # Set OTN Port Conditioning
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/otnportconditioning.xml
+# Set Conditioning holdoff
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/conditioningholdoff.xml
 ```
 ### Alarms
 
@@ -210,10 +212,12 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 rpc located: [xcvr](xcvr)
 
 ```bash
+# Get Diagnostics
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getdiagnostics.xml > getdiagnosticsoutput.xml
 # Get Actual Mode
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getactualmode.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getactualmode.xml > getactualmodeoutput.xml
 # Get Operational Mode
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getoperationalmode.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getoperationalmode.xml > getoperationalmodeoutput.xml
 # Set Waveserver XCVR properties 
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setwsxcvrproperties.xml
 # Set xcvr mode 56-200
@@ -238,7 +242,7 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Get Loopback
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml > loopback.xml
 # Enable Port
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-enable.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-enable.xml > getportoutput.xml
 ```
 ### Maintenance
 rpc located: [maintenance](maintenance)
