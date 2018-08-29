@@ -1,0 +1,19 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-system xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-system"
+                         xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <shell>
+          <inactivity-timer>enabled</inactivity-timer>
+          <inactivity-timeout>60</inactivity-timeout>
+          <more>enabled</more>
+          <more-lines>0</more-lines>
+          <login-authentication-message>enabled</login-authentication-message>
+          <login-banner-file>(none)</login-banner-file>
+          <welcome-banner-file>(none)</welcome-banner-file>
+        </shell>
+      </waveserver-system>
+    </config>
+</edit-config>
