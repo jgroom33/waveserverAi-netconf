@@ -142,11 +142,11 @@ rpc located: [system/lamp-test](system/lamp-test)
 ```bash
 # Disable Lamp Test Chassis
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassis-disable.xml
-# Enable Access Panel Chassis
+# Enable Lamp Test Chassis
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassi-enable.xml
 # Disable Lamp Test slot
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-disable.xml
-# Enable Access Panel slot
+# Enable Lamp Test slot
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-enable.xml
 ```
 ### PMs
@@ -202,8 +202,6 @@ rpc located: [alarm](alarm)
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > alarms.xml
 ```
 
-
-
 ### XCVR
 rpc located: [xcvr](xcvr)
 
@@ -242,11 +240,11 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 rpc located: [maintenance](maintenance)
 
 ```bash
-# Disable Port
+# System State Dump
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/system-state-dump.xml
-# Disable Loopback
+# XFTP Setup
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/system-xftp.xml
-# Rx Loopback
+# Configuration backup
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/configuration-backup.xml
 
 ```
