@@ -14,13 +14,13 @@
         <ports>
           <port-id>2-1</port-id>
           <properties>
-            <loopback>disabled</loopback>
+            <loopback>tx</loopback>
           </properties>
         </ports>
         <ports>
           <port-id>2-3</port-id>
           <properties>
-            <loopback>tx</loopback>
+            <loopback>disabled</loopback>
           </properties>
         </ports>
       </waveserver-ports>

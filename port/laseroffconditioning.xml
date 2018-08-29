@@ -2,27 +2,26 @@
     <target>
       <running/>
     </target>
+    <error-option>stop-on-error</error-option>
     <config>
       <waveserver-ports xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port"
                         xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <ports>
-          <port-id>2-4</port-id>
-          <properties>
-            <loopback>disabled</loopback>
-          </properties>
-        </ports>
-        <ports>
-          <port-id>2-1</port-id>
-          <properties>
-            <loopback>rx</loopback>
-          </properties>
-        </ports>
-        <ports>
           <port-id>2-3</port-id>
           <properties>
-            <loopback>disabled</loopback>
+            <ethernet>
+              <conditioning-type>laser-off</conditioning-type>
+            </ethernet>
+          </properties>
+        </ports>
+        <ports>
+          <port-id>2-4</port-id>
+          <properties>
+            <ethernet>
+              <conditioning-type>laser-off</conditioning-type>
+            </ethernet>
           </properties>
         </ports>
       </waveserver-ports>
     </config>
-  </edit-config>
+</edit-config>

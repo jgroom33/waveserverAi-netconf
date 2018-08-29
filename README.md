@@ -53,7 +53,9 @@ rpc located: [license](license)
 # get license
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
 # Activate license *note license file needed to be update on xml
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=/license/activate-license-file.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/activate-license-file.xml
+# get Reg id
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/set-reg-id.xml
 ```
 
 ### Software upgrade
@@ -63,6 +65,8 @@ rpc located: [software](software)
 ```bash
 # Install (Download, Activate, Commit) software from URL
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/install.xml
+# Get Software information
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/get-software.xml
 ```
 
 ### Configuration
@@ -76,6 +80,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-reset-to-user-config.xml
 # Configuration delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-delete.xml
+# Set Hostname
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/Sethostname.xml
 ```
 ### Encryption
 Commands print their output to getsharedkey.xml
@@ -146,13 +152,17 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 
 ### Lamp Test
 
-rpc located: [chassis/lamp-test](chassis/lamp-test)
+rpc located: [system/lamp-test](system/lamp-test)
 
 ```bash
-# Disable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-disable.xml
-# Enable Access Panel
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/panel-enable.xml
+# Disable Lamp Test Chassis
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassis-disable.xml
+# Enable Access Panel Chassis
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassi-enable.xml
+# Disable Lamp Test slot
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-disable.xml
+# Enable Access Panel slot
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-enable.xml
 ```
 
 
@@ -200,4 +210,45 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/snmpcreate.xml
 # Set SNMP get
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=snmp/snmpget.xml
+```
+### XCVR
+rpc located: [xcvr](xcvr)
+
+```bash
+# Get Actual Mode
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getactualmode.xml
+# Get Operational Mode
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getoperationalmode.xml
+# Set Waveserver XCVR properties 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setwsxcvrproperties.xml
+# Set xcvr mode 56-200
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setxcvrmode56-200.xml
+# Set xcvr mode 56-400
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setxcvrmode56-400.xml
+# Set xcvr mode 56-300
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setxvcrmode56-300.xml
+```
+
+### port
+rpc located: [port](port)
+
+```bash
+# Set Ethernet properties
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setethernetproperties.xml
+# Set OTN properties
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setotnproperties.xml
+# Set PTP properties 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setptpproperties.xml
+# Set Port properties 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setportproperties.xml
+# Set Channel properties 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setchannelproperties.xml
+# Set Laseroff Conditioning
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/laseroffconditioning.xml
+# Set Ethernet Port Conditioning
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/ethernetportconditioning.xml
+# Set None Port Conditioning
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/none-portconditioning.xml
+# Set OTN Port Conditioning
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/otnportconditioning.xml
 ```

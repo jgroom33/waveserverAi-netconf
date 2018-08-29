@@ -1,5 +1,5 @@
 <configuration:waveserver-configuration-reset-to-user-config xmlns:configuration="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-configuration"
                                                              xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <configuration:filename>Myconfig1</configuration:filename>
+  <configuration:filename>wsai-0198.txt</configuration:filename>
   <configuration:revert-timeout>x</configuration:revert-timeout>
 </configuration:waveserver-configuration-reset-to-user-config>

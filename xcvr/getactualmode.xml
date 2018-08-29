@@ -1,0 +1,11 @@
+<get>
+  <filter type="subtree">
+    <xcvr:waveserver-xcvrs xmlns:xcvr="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-xcvr">
+      <xcvr:xcvrs>
+        <xcvr:state>
+          <xcvr:actual-mode/>
+        </xcvr:state>
+      </xcvr:xcvrs>
+    </xcvr:waveserver-xcvrs>
+  </filter>
+</get>

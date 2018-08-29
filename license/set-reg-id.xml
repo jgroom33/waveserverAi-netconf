@@ -1,0 +1,18 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-license xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-license"
+                          xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <client>
+          <id>
+            <registration-id>WaveserverAi-IT</registration-id>
+          </id>
+          <state>
+            <admin-state>enabled</admin-state>
+          </state>
+        </client>
+      </waveserver-license>
+    </config>
+</edit-config>

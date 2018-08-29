@@ -1,0 +1,28 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-xcvrs xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-xcvr"
+                        xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <xcvrs>
+          <xcvr-id>2-1</xcvr-id>
+          <properties>
+            <mode>56-300</mode>
+          </properties>
+        </xcvrs>
+        <xcvrs>
+          <xcvr-id>2-3</xcvr-id>
+          <properties>
+            <mode>100GE</mode>
+          </properties>
+        </xcvrs>
+        <xcvrs>
+          <xcvr-id>2-4</xcvr-id>
+          <properties>
+            <mode>100GE</mode>
+          </properties>
+        </xcvrs>
+      </waveserver-xcvrs>
+    </config>
+  </edit-config>
