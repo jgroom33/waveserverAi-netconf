@@ -1,0 +1,5 @@
+<get>
+  <filter type="subtree">
+    <port:waveserver-ports xmlns:port="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port"/>
+  </filter>
+</get>

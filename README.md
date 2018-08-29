@@ -92,7 +92,9 @@ rpc located: [ptp](ptp)
 
 ```bash
 # Set PTP properties 
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setptpproperties.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPTP.xml
+# Set PTP properties 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setptpproperties.xml
 ```
 ### Encryption
 Commands print their output to getsharedkey.xml
@@ -174,6 +176,8 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 rpc located: [port](port)
 
 ```bash
+# Get Ports
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml
 # Set Ethernet properties
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setethernetproperties.xml
 # Set OTN properties

@@ -1,0 +1,7 @@
+<get>
+  <filter type="subtree">
+    <ptp:waveserver-ptps xmlns:ptp="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp">
+      <ptp:ptps/>
+    </ptp:waveserver-ptps>
+  </filter>
+</get>
