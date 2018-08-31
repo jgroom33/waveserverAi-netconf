@@ -1,0 +1,7 @@
+<get>
+  <filter type="subtree">
+    <alarm:waveserver-alarms xmlns:alarm="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-alarm">
+      <alarm:active/>
+    </alarm:waveserver-alarms>
+  </filter>
+</get>

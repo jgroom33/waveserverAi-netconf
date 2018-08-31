@@ -1,0 +1,6 @@
+<pm:waveserver-pm-clear-interface xmlns:pm="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-pm">
+    <pm:interface-name>2/3</pm:interface-name>
+    <pm:interface-type>port</pm:interface-type>
+    <pm:profile-type>ethernet-performance</pm:profile-type>
+    <pm:history>false</pm:history>
+</pm:waveserver-pm-clear-interface>

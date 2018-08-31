@@ -1,0 +1,11 @@
+<get>
+  <filter type="subtree">
+    <license:waveserver-license xmlns:license="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-license">
+      <license:client>
+        <license:id>
+          <license:registration-id/>
+        </license:id>
+      </license:client>
+    </license:waveserver-license>
+  </filter>
+</get>

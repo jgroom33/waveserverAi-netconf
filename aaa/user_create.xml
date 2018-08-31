@@ -9,7 +9,7 @@
         <user-name>test</user-name>
         <password>test1234</password>
         <secret/>
-        <access-level>limited</access-level>
+        <access-level>super</access-level>
     </user>
     </waveserver-aaa>
 </config>

@@ -13,6 +13,7 @@
               <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
                 <pre-shared-key>
                   <description>hex16.psk</description>
+                  <value>12345678912345678912345678912345</value> 
                 </pre-shared-key>
               </encryption>
             </properties>
@@ -22,7 +23,8 @@
             <properties>
               <encryption xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption">
                 <pre-shared-key>
-                  <description>hex64.psk</description>
+                 <description>amazon</description>
+                  <value>12345678912345678912345678912345</value> 
                 </pre-shared-key>
               </encryption>
             </properties>

@@ -7,7 +7,7 @@
                           xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <client>
           <id>
-            <registration-id>WaveserverAi-IT</registration-id>
+            <registration-id>AMAZON_COM_001</registration-id>
           </id>
           <state>
             <admin-state>enabled</admin-state>

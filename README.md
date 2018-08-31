@@ -52,9 +52,15 @@ rpc located: [license](license)
 ```bash
 # get license
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
+# get license List
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license-list.xml
+# get license instances
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/license-alarm-instances.xml
+# get Reg id
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-reg-id.xml
 # Activate license *note license file needed to be update on xml
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/activate-license-file.xml
-# get Reg id
+# set Reg id
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/set-reg-id.xml
 ```
 
@@ -105,7 +111,7 @@ rpc located: [encryption](encryption)
 # Setup Pre-Shared Key
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/pre-sharedkey.xml
 # Get Pre-Shared Key
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-presharedkey.xml > getsharedkey.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-presharedkey.xml > output/getsharedkey.xml
 ```
 
 ### User Get/Create/Delete/Syslog
@@ -159,17 +165,45 @@ rpc located: [pm](pm)
 
 ```bash
 # Get Ethernet
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml > ethernet-pm.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml > output/ethernet-pm.xml
 # Get Modem PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml > modem-pm.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml > output/modem-pm.xml
 # Get ODU PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml > odu-pm.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml > output/odu-pm.xml
 # Get OTU PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml > otu-pm.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml > output/otu-pm.xml
 # Get optical PMs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml > optical-pm.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml > output/optical-pm.xml
 # Get PM Config
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > pm-config.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > output/pm-config.xml
+# Get Encryption-gcm-pm-instance history
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history.xml > output/pm-encrypt-config.xml
+# Get Encryption-gcm-pm-instance Untimed bin
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml > output/pm-untimed.xml
+# Get Encryption-gcm-pm-instance Current bin
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-current-bin.xml > output/pm-current.xml
+# Get Encryption-gcm-pm-instance 24 hour bin
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml > output/pm-24hr.xml
+# Get Ethernet PM History
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml > output/eth-pm-his.xml
+# Get Optical PM 24 hr History
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml > output/optical-pm-24.xml
+# Get PM Instance autocreated
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-instance-autocreated.xml > output/pm-autocreated.xml
+# Clear ptp PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-ptp.xml > output/pm-24hr.xml
+# Clear Port PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-port.xml > output/eth-pm-his.xml
+# Clear Channel PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-channel.xml > output/optical-pm-24.xml
+# Get Optical-power  24-hrs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml > output/pm-autocreated.xml
+# Get Optical-power  24-hrs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml > output/pm-otu.xml
+# Get Optical-power  24-hrs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml > output/pm-ethernet.xml
+# Get Optical-power  24-hrs
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/Pm-admin-state.xml
 ```
 
 ### PORT
@@ -177,7 +211,7 @@ rpc located: [port](port)
 
 ```bash
 # Get Ports
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml > getportoutput.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml > output/getportoutput.xml
 # Set Ethernet properties
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/setethernetproperties.xml
 # Set OTN properties
@@ -205,7 +239,13 @@ rpc located: [alarm](alarm)
 
 ```bash
 # Get Alarms
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > alarms.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml > output/alarms.xml
+# Get Alarms Active
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-active.xml > output/alarms-act.xml
+# Get Alarms History
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-history.xml > output/alarms-his.xml
+# Get Alarms Statistics
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-statistics.xml > output/alarms-st.xml
 ```
 
 ### XCVR
@@ -213,11 +253,11 @@ rpc located: [xcvr](xcvr)
 
 ```bash
 # Get Diagnostics
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getdiagnostics.xml > getdiagnosticsoutput.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getdiagnostics.xml > output/getdiagnosticsoutput.xml
 # Get Actual Mode
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getactualmode.xml > getactualmodeoutput.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getactualmode.xml > output/getactualmodeoutput.xml
 # Get Operational Mode
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getoperationalmode.xml > getoperationalmodeoutput.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/getoperationalmode.xml > output/getoperationalmodeoutput.xml
 # Set Waveserver XCVR properties 
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=xcvr/setwsxcvrproperties.xml
 # Set xcvr mode 56-200
@@ -240,9 +280,9 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Tx Loopback
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/tx-loopback.xml
 # Get Loopback
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml > loopback.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml > output/loopback.xml
 # Enable Port
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-enable.xml > getportoutput.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/port-enable.xml > output/getportoutput.xml
 ```
 ### Maintenance
 rpc located: [maintenance](maintenance)
@@ -264,9 +304,9 @@ rpc located: [chassis](chassis)
 
 ```bash
 # Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart.xml > restart.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart.xml > output/restart.xml
 # Cold Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > restart.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/restart-cold.xml > output/restart.xml
 ```
 ### Warm and Cold Restart Modules
 
@@ -276,7 +316,7 @@ rpc located: [module](module)
 
 ```bash
 # Cold Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-cold-restart.xml > restart.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-cold-restart.xml > output/restart.xml
 # Warm Restart Waveserver Ai
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-warm-restart.xml > restart.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-warm-restart.xml > output/restart.xml
 ```

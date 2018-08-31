@@ -1,0 +1,9 @@
+<get>
+  <filter type="subtree">
+    <pm:waveserver-pm xmlns:pm="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-pm">
+      <pm:otu-performance-instances>
+        <pm:history/>
+      </pm:otu-performance-instances>
+    </pm:waveserver-pm>
+  </filter>
+</get>
