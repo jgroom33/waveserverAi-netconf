@@ -104,14 +104,13 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 ```
 ### Encryption
 Commands print their output to getsharedkey.xml
-
 rpc located: [encryption](encryption)
 
 ```bash
 # Setup Pre-Shared Key
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/pre-sharedkey.xml
 # Get Pre-Shared Key
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-presharedkey.xml > output/getsharedkey.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=encryption/get-channel-encryption.xml > output/getsharedkey.xml
 ```
 
 ### User Get/Create/Delete/Syslog
