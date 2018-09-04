@@ -1,0 +1,16 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-pm xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-pm"
+                     xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <otu-performance-instances>
+          <instance-name>2-1-OTU</instance-name>
+          <state>
+            <admin-state>enabled</admin-state>
+          </state>
+        </otu-performance-instances>
+      </waveserver-pm>
+    </config>
+  </edit-config>

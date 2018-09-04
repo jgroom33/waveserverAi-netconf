@@ -8,7 +8,7 @@
         <ethernet-performance-instances>
           <instance-name>2-3-Ethernet</instance-name>
           <state>
-            <admin-state>disabled</admin-state>
+            <admin-state>enabled</admin-state>
           </state>
         </ethernet-performance-instances>
       </waveserver-pm>

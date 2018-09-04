@@ -163,6 +163,26 @@ Commands print their output to output.xml
 rpc located: [pm](pm)
 
 ```bash
+# Set PM State
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-disable.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-enable.xml
+# Set PTP State
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-disable.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-enable.xml
+# Set Modem-pm-enable
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/modem-pm-enable.xml
+# Clear ptp PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-ptp.xml
+# Clear Port PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-port.xml
+# Clear Channel PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-channel.xml
+# Get PM Config
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml
+# Get PM Instance autocreated
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-instance-autocreated.xml
+# Get PM
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm.xml
 # Get Ethernet
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml > output/ethernet-pm.xml
 # Get Modem PMs
@@ -173,36 +193,20 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml > output/otu-pm.xml
 # Get optical PMs
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml > output/optical-pm.xml
-# Get PM Config
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml > output/pm-config.xml
 # Get Encryption-gcm-pm-instance history
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history.xml > output/pm-encrypt-config.xml
 # Get Encryption-gcm-pm-instance Untimed bin
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml > output/pm-untimed.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml > output/Encrypy-pm-untimed.xml
 # Get Encryption-gcm-pm-instance Current bin
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-current-bin.xml > output/pm-current.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-current-bin.xml > output/Encrypy-pm-current.xml
 # Get Encryption-gcm-pm-instance 24 hour bin
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml > output/pm-24hr.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml > output/Encrypy-pm-24hr.xml
 # Get Ethernet PM History
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml > output/eth-pm-his.xml
 # Get Optical PM 24 hr History
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml > output/optical-pm-24.xml
-# Get PM Instance autocreated
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-instance-autocreated.xml > output/pm-autocreated.xml
-# Clear ptp PM
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-ptp.xml > output/pm-24hr.xml
-# Clear Port PM
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-port.xml > output/eth-pm-his.xml
-# Clear Channel PM
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-clear-channel.xml > output/optical-pm-24.xml
-# Get Optical-power  24-hrs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml > output/pm-autocreated.xml
-# Get Optical-power  24-hrs
+# Get OTU
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml > output/pm-otu.xml
-# Get Optical-power  24-hrs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml > output/pm-ethernet.xml
-# Get Optical-power  24-hrs
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/Pm-admin-state.xml
 ```
 
 ### PORT

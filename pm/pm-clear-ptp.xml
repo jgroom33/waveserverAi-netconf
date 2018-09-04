@@ -1,5 +1,5 @@
 <pm:waveserver-pm-clear-interface xmlns:pm="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-pm">
-    <pm:interface-name>2/3</pm:interface-name>
+    <pm:interface-name>2/1</pm:interface-name>
     <pm:interface-type>ptp</pm:interface-type>
     <pm:profile-type>optical-power</pm:profile-type>
     <pm:history>false</pm:history>
