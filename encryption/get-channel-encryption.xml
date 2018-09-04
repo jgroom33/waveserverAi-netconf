@@ -1,0 +1,14 @@
+<get>
+  <filter type="subtree">
+    <port:waveserver-ports xmlns:encryption="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-encryption"
+                           xmlns:port="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port">
+      <port:ports>
+        <port:channels>
+          <port:properties>
+            <encryption:encryption/>
+          </port:properties>
+        </port:channels>
+      </port:ports>
+    </port:waveserver-ports>
+  </filter>
+</get>
