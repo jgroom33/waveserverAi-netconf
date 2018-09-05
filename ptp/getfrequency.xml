@@ -1,0 +1,14 @@
+<get>
+  <filter type="subtree">
+    <ptp:waveserver-ptps xmlns:ptp-modem="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp-modem"
+                         xmlns:ptp="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp">
+      <ptp:ptps>
+        <ptp:properties>
+          <ptp:transmitter>
+            <ptp-modem:frequency/>
+          </ptp:transmitter>
+        </ptp:properties>
+      </ptp:ptps>
+    </ptp:waveserver-ptps>
+  </filter>
+</get>

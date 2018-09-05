@@ -99,8 +99,16 @@ rpc located: [ptp](ptp)
 ```bash
 # Set PTP properties 
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPTP.xml
-# Set PTP properties 
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setptpproperties.xml
+# Get frequency
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getfrequency.xml
+# Get PTP power 
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPower.xml
+# Set PTP frequency
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setfrequency.xml
+# Disable PTP  
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/ptp-disable.xml
+# Set PTP power (Run after Frequency State is up)
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setPower.xml
 ```
 ### Encryption
 Commands print their output to getsharedkey.xml

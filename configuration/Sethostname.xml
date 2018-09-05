@@ -1,0 +1,13 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-system xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-system"
+                         xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <host-name>
+          <config-host-name>wsai_0197</config-host-name>
+        </host-name>
+      </waveserver-system>
+    </config>
+  </edit-config>

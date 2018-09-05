@@ -1,0 +1,26 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-ptps xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp"
+                       xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <ptps>
+          <ptp-id>2-1</ptp-id>
+          <properties>
+            <transmitter>
+              <frequency xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp-modem">
+                <value>195562.5</value>
+              </frequency>
+            </transmitter>
+          </properties>
+        </ptps>
+        <ptps>
+          <ptp-id>2-3</ptp-id>
+          <properties>
+            <transmitter/>
+          </properties>
+        </ptps>
+      </waveserver-ptps>
+    </config>
+  </edit-config>

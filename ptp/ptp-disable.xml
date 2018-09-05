@@ -1,0 +1,18 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-ptps xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp"
+                       xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <ptps>
+          <ptp-id>2-1</ptp-id>
+          <properties>
+            <transmitter>
+              <state>disabled</state>
+            </transmitter>
+          </properties>
+        </ptps>
+      </waveserver-ptps>
+    </config>
+  </edit-config>

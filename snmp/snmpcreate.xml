@@ -6,34 +6,14 @@
       <waveserver-snmp xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-snmp"
                        xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <global-config>
-          <admin-state>disabled</admin-state>
+          <admin-state>enabled</admin-state>
           <standard-link-traps-admin-state>enabled</standard-link-traps-admin-state>
           <contact>Customer Support, Ciena</contact>
           <location>Not Specified</location>
         </global-config>
         <target>
-          <name>anywhere</name>
-          <address>0.0.0.0/0</address>
-          <target-params>none</target-params>
-          <tag>anywhereTag</tag>
-          <port>0</port>
-          <transport-domain>snmp-udp</transport-domain>
-          <timeout>0</timeout>
-          <retry-count>0</retry-count>
-        </target>
-        <target>
-          <name>anywhereIpv6</name>
-          <address>::/0</address>
-          <target-params>none</target-params>
-          <tag>anywhereTag</tag>
-          <port>0</port>
-          <transport-domain>v6-udp</transport-domain>
-          <timeout>0</timeout>
-          <retry-count>0</retry-count>
-        </target>
-        <target>
           <name>SNMPBrowser</name>
-          <address>10.176.110.237/22</address>
+          <address>10.176.210.250/20</address>
           <target-params>public-v2c</target-params>
           <tag>TrapTag</tag>
           <port>0</port>
