@@ -1,4 +1,4 @@
-  <edit-config>
+<edit-config>
     <target>
       <running/>
     </target>
@@ -6,13 +6,11 @@
       <waveserver-ports xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port"
                         xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <ports>
-          <port-id>2-3</port-id>
-          <properties>
-            <ethernet>
-              <conditioning-holdoff>1000</conditioning-holdoff>
-            </ethernet>
-          </properties>
+          <port-id>2-1</port-id>
+          <state>
+            <admin-state>disabled</admin-state>
+          </state>
         </ports>
       </waveserver-ports>
     </config>
-</edit-config>
+  </edit-config>

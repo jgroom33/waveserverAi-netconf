@@ -1,4 +1,4 @@
-  <edit-config>
+<edit-config>
     <target>
       <running/>
     </target>
@@ -8,11 +8,9 @@
         <ports>
           <port-id>2-3</port-id>
           <properties>
-            <ethernet>
-              <conditioning-holdoff>1000</conditioning-holdoff>
-            </ethernet>
+            <forward-error-correction>disabled</forward-error-correction>
           </properties>
         </ports>
       </waveserver-ports>
     </config>
-</edit-config>
+  </edit-config>

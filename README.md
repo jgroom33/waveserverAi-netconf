@@ -84,12 +84,15 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-install.xml
 # Configuration reset to user config
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-reset-to-user-config.xml
+# Configuration reset to factory
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/reset-to-factory-default.xml
 # Configuration delete
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/config-delete.xml
 # Set Hostname
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/Sethostname.xml
 # Set System shell (inactivity time, banner)
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=configuration/Set-system-shell.xml
+
 ```
 
 ### PTP
@@ -105,10 +108,18 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPower.xml
 # Set PTP frequency
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setfrequency.xml
+# Set PTP disable,frequency & Power to 191342.5
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/freq-power-set.xml
+# Set PTP disable,frequency & Power to 0
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/disable-ptp-freq0.xml
+# Enable PTP  
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/enable-ptp.xml
 # Disable PTP  
-netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/ptp-disable.xml
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/disable-ptp.xml
 # Set PTP power (Run after Frequency State is up)
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/setPower.xml
+# Set Frequency & Power
+netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/freq-power-set.xml
 ```
 ### Encryption
 Commands print their output to getsharedkey.xml

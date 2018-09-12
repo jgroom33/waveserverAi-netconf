@@ -11,14 +11,7 @@
           <properties>
             <ethernet>
               <conditioning-type>laser-off</conditioning-type>
-            </ethernet>
-          </properties>
-        </ports>
-        <ports>
-          <port-id>2-4</port-id>
-          <properties>
-            <ethernet>
-              <conditioning-type>laser-off</conditioning-type>
+              <conditioning-holdoff>1000</conditioning-holdoff>
             </ethernet>
           </properties>
         </ports>

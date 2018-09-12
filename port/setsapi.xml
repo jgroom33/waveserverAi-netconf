@@ -1,0 +1,32 @@
+<edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <waveserver-ports xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-port"
+                        xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
+        <ports>
+          <port-id>2-1</port-id>
+          <id>
+            <label/>
+            <type>OTUCn</type>
+          </id>
+          <properties>
+            <otn>
+              <pre-fec-otu-sf-threshold>0.60</pre-fec-otu-sf-threshold>
+              <pre-fec-otu-sd-threshold>0.60</pre-fec-otu-sd-threshold>
+              <otu-sd-threshold>1E-6</otu-sd-threshold>
+              <odu-sd-threshold>1E-6</odu-sd-threshold>
+              <trace>
+                <section>
+                  <tx-sapi>Amazon198</tx-sapi>
+                  <tx-oper-mode>automatic</tx-oper-mode>
+                  <exp-sapi>Amazon197</exp-sapi>
+                </section>
+              </trace>
+            </otn>
+          </properties>
+        </ports>
+      </waveserver-ports>
+    </config>
+  </edit-config>

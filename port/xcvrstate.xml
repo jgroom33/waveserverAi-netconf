@@ -7,9 +7,9 @@
                         xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <xcvrs>
           <xcvr-id>2-1</xcvr-id>
-          <properties>
-            <mode>56-200</mode>
-          </properties>
+          <state>
+            <admin-state>disabled</admin-state>
+          </state>
         </xcvrs>
       </waveserver-xcvrs>
     </config>

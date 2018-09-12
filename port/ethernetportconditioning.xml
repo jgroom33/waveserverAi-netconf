@@ -14,14 +14,6 @@
             </ethernet>
           </properties>
         </ports>
-        <ports>
-          <port-id>2-4</port-id>
-          <properties>
-            <ethernet>
-              <conditioning-type>ethernet</conditioning-type>
-            </ethernet>
-          </properties>
-        </ports>
       </waveserver-ports>
     </config>
 </edit-config>

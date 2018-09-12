@@ -6,12 +6,20 @@
       <waveserver-ptps xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp"
                        xmlns:ncx="http://netconfcentral.org/ns/yuma-ncx">
         <ptps>
-          <ptp-id>2-1</ptp-id>
+          <ptp-id>1-1</ptp-id>
+          <state>
+            <admin-state>disabled</admin-state>
+          </state>
           <properties>
+            <xcvr-type>WaveLogic Ai</xcvr-type>
             <transmitter>
+              <state>enabled</state>
               <frequency xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp-modem">
-                <value>195562.5</value>
+                <value>191342.5</value>
               </frequency>
+              <power xmlns="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-ptp-modem">
+                <value>3.0</value>
+              </power>
             </transmitter>
           </properties>
         </ptps>

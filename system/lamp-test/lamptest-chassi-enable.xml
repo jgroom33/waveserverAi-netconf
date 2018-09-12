@@ -8,7 +8,7 @@
         <lamp-test>
           <admin-state>enabled</admin-state>
           <target-type>chassis</target-type>
-          <timeout>0</timeout>
+          <timeout>15</timeout>
         </lamp-test>
       </waveserver-system>
     </config>

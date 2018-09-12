@@ -1,6 +1,6 @@
 <configuration:waveserver-configuration-save xmlns:configuration="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-configuration"
                                              xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <configuration:filename>Myconfig1</configuration:filename>
-  <configuration:strip-user-comments>true</configuration:strip-user-comments>
+  <configuration:strip-user-comments>false</configuration:strip-user-comments>
   <configuration:include-default-settings>true</configuration:include-default-settings>
 </configuration:waveserver-configuration-save>

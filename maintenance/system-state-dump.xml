@@ -1,18 +1,3 @@
 <system:waveserver-system-state-dump xmlns:system="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-system">
-    <system:file-name>x</system:file-name>
-    <system:include-corefiles>true</system:include-corefiles>
-    <system:server-to-use>none</system:server-to-use>
-    <system:tftp-server-address>x</system:tftp-server-address>
-    <system:ftp-server-address>x</system:ftp-server-address>
-    <system:ftp-login-id>x</system:ftp-login-id>
-    <system:ftp-password>x</system:ftp-password>
-    <system:ftp-secret>x</system:ftp-secret>
-    <system:sftp-server-address>x</system:sftp-server-address>
-    <system:sftp-login-id>x</system:sftp-login-id>
-    <system:sftp-password>x</system:sftp-password>
-    <system:sftp-secret>x</system:sftp-secret>
-    <system:scp-server-address>x</system:scp-server-address>
-    <system:scp-login-id>x</system:scp-login-id>
-    <system:scp-password>x</system:scp-password>
-    <system:scp-secret>x</system:scp-secret>
+    <system:file-name>wsai_0198</system:file-name>
   </system:waveserver-system-state-dump>
