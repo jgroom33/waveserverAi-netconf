@@ -1,0 +1,10 @@
+image: Currated_Netconf
+Hello:
+  stage: test
+  script: 
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
+  artifacts:
+    paths:
+     - netconf_history.json
+
+
