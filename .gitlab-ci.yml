@@ -1,4 +1,4 @@
-image: currated_netconf
+
 Hello:
   stage: test
   script: 
