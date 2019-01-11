@@ -6,7 +6,8 @@ Prepare:
 Hello:
   stage: test
   script: 
-    - ./scripts/netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
+    - cd /
+    -  ./scripts/netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
   artifacts:
     paths:
      - netconf_history.json
