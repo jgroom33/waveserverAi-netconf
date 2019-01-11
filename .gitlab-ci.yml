@@ -2,7 +2,7 @@ image: viveris/netconf-console
 Prepare:
   stage: test
   script:
-    -chmod a+x /scripts/netconf-console
+    - chmod a+x /scripts/netconf-console
 Hello:
   stage: test
   script: 
