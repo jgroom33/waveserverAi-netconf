@@ -1,10 +1,8 @@
-image: viveris/netconf-console    
+image: mmakramalla/netconf-console    
 Hello:
   stage: test
   script: 
-    - chmod a+x /scripts/netconf-console
-    - cd /
-    -  ./scripts/netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
   artifacts:
     paths:
      - netconf_history.json
