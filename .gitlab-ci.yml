@@ -1,4 +1,4 @@
-image: mmakramalla/netconf-console    
+image: mmakramalla/netconf-console:0.0.1    
 Hello:
   stage: test
   script: 
