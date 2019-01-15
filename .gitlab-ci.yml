@@ -3,9 +3,7 @@ Hello:
   stage: test
   script:   
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
-  artifacts:
-    paths:
-     - netconf_history.json
+
 System:
   stage: test
   script:
@@ -19,17 +17,13 @@ System:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_enable.xml
     - cat system/ntp_get.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
-  artifacts:
-    paths:
-      - netconf_history.json
+
 Date:
   stage: test
   script:
     - cat system/date-time_get.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_get.xml
-  artifacts:
-    paths:
-      - netconf_history.json
+
 
 Licenses:
   stage: test
@@ -42,9 +36,7 @@ Licenses:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/license-alarm-instances.xml
     - cat license/get-reg-id.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-reg-id.xml
-  artifacts:
-    paths:
-      - netconf_history.json  
+ 
 
 
 
