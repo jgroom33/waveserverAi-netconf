@@ -16,6 +16,6 @@ System:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
   artifacts:
     paths:
-      -netconf_history.json
+      - netconf_history.json
 
 
