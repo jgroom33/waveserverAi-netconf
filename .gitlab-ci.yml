@@ -1,7 +1,7 @@
 image: mmakramalla/netconf-console:0.0.1    
 Hello:
   stage: test
-  script: 
+  script:   
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --hello
   artifacts:
     paths:
@@ -9,13 +9,42 @@ Hello:
 System:
   stage: test
   script:
+    - cat system/ntp_get.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
+    - cat system/ntp_disable.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_disable.xml
+    - cat system/ntp_get.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
+    - cat system/ntp_enable.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_enable.xml
+    - cat system/ntp_get.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/ntp_get.xml
   artifacts:
     paths:
       - netconf_history.json
+Date:
+  stage: test
+  script:
+    - cat system/date-time_get.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/date-time_get.xml
+  artifacts:
+    paths:
+      - netconf_history.json
+
+Licenses:
+  stage: test
+  script:
+    - cat license/get-license.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license.xml
+    - cat license/get-license-list.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-license-list.xml
+    - cat license/license-alarm-instances.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/license-alarm-instances.xml
+    - cat license/get-reg-id.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-reg-id.xml
+  artifacts:
+    paths:
+      - netconf_history.json  
+
 
 
