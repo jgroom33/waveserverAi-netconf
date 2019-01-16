@@ -3,7 +3,6 @@
     <alarm:waveserver-alarms xmlns:alarm="urn:ciena:params:xml:ns:yang:ciena-ws:ciena-waveserver-alarm">
       <alarm:active/>
     </alarm:waveserver-alarms>
-    THIS SHOULD NOT WORK
   </filter>
 </get>
 
