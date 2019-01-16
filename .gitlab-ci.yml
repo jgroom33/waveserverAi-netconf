@@ -53,7 +53,7 @@ PTP:
     - cat ptp/getPower.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPower.xml
 
- AAA:
+AAA:
   stage: test
   script: 
     - cat aaa/user_get.xml
