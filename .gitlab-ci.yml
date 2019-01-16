@@ -36,6 +36,44 @@ Licenses:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/license-alarm-instances.xml
     - cat license/get-reg-id.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=license/get-reg-id.xml
+
+Software:
+  stage: test
+  script:
+    - cat software/get-software.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=software/get-software.xml
+
+PTP:
+  stage: test
+  script:
+    - cat ptp/getPTP.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPTP.xml
+    - cat ptp/getfrequency.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getfrequency.xml
+    - cat ptp/getPower.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=ptp/getPower.xml
+
+ AAA:
+  stage: test
+  script: 
+    - cat aaa/user_get.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_get.xml
+    - cat aaa/user_create.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_create.xml
+    - cat aaa/user_delete.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
+
+LampTest:
+  stage: test
+  script: 
+    - cat chassis/lamp-test/lamptest-chassis-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassis-disable.xml
+    - cat =chassis/lamp-test/lamptest-chassi-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassi-enable.xml
+    - cat chassis/lamp-test/lamptest-slot-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-disable.xml
+    - cat chassis/lamp-test/lamptest-slot-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-enable.xml
  
 
 
