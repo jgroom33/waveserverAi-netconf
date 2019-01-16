@@ -74,6 +74,48 @@ LampTest:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-disable.xml
     - cat system/lamp-test/lamptest-slot-enable.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-enable.xml
+
+PMs:
+  stage: test
+  script:
+    - cat pm/pm-admin-state-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-disable.xml
+    - cat pm/pm-admin-state-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-enable.xml
+    - cat pm/ptp-pm-state-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-disable.xml
+    - cat pm/ptp-pm-state-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-enable.xml
+    - cat pm/get-global-config.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml
+    - cat pm/get-pm-instance-autocreated.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-instance-autocreated.xml
+    - cat pm/get-pm.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm.xml
+    - cat pm/get-pm-ethernet.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml 
+    - cat netconf-console pm/get-pm-modem.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml
+    - cat pm/get-pm-odu.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml
+    - cat pm/get-pm-otu.xml 
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml
+    - cat pm/get-pm-optical-power.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml
+    - cat pm/get-encryption-gcm-pm-instance-history.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history.xml
+    - cat pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml
+    - cat pm/get-encryption-gcm-pm-instance-history-current-bin.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-current-bin.xml
+    - cat pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml
+    - cat =pm/get-ethernet-pm-history.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml
+    - cat pm/get-optical-power-history-24-hours.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml
+    - cat pm/otu-pm-history.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml
  
 
 

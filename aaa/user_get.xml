@@ -7,7 +7,6 @@
       <aaa:user/>
     </aaa:waveserver-aaa>
   </filter>
-  THIS SHOULD NOT WORK
 </get-config>
 
 
