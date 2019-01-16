@@ -66,14 +66,14 @@ AAA:
 LampTest:
   stage: test
   script: 
-    - cat chassis/lamp-test/lamptest-chassis-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassis-disable.xml
-    - cat =chassis/lamp-test/lamptest-chassi-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-chassi-enable.xml
-    - cat chassis/lamp-test/lamptest-slot-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-disable.xml
-    - cat chassis/lamp-test/lamptest-slot-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=chassis/lamp-test/lamptest-slot-enable.xml
+    - cat system/lamp-test/lamptest-chassis-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-chassis-disable.xml
+    - cat =system/lamp-test/lamptest-chassi-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-chassi-enable.xml
+    - cat system/lamp-test/lamptest-slot-disable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-disable.xml
+    - cat system/lamp-test/lamptest-slot-enable.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-enable.xml
  
 
 
