@@ -164,3 +164,16 @@ Maintenance:
     - cat maintenance/configuration-backup.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/configuration-backup.xml
   allow_failure: true
+
+  Alarms:
+  stage: test
+  script:
+    - cat alarm/get-alarms.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml
+    - cat netconf-console alarm/get-alarm-active.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-active.xml
+    - cat alarm/get-alarm-history.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-history.xml
+    - cat alarm/get-alarm-statistics.xml
+    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-statistics.xml
+  allow_failure: true
