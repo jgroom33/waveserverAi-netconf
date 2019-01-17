@@ -140,7 +140,7 @@ PMs:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml
   allow_failure: true
 
-  Alarms:
+Alarms:
   stage: test
   script:
     - cat alarm/get-alarms.xml
