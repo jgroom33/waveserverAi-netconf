@@ -63,61 +63,6 @@ AAA:
     - cat aaa/user_delete.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=aaa/user_delete.xml
 
-LampTest:
-  stage: test
-  script: 
-    - cat system/lamp-test/lamptest-chassis-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-chassis-disable.xml
-    - cat =system/lamp-test/lamptest-chassi-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-chassi-enable.xml
-    - cat system/lamp-test/lamptest-slot-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-disable.xml
-    - cat system/lamp-test/lamptest-slot-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-enable.xml
-  allow_failure: true
-
-PMs:
-  stage: test
-  script:
-    - cat pm/pm-admin-state-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-disable.xml
-    - cat pm/pm-admin-state-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/pm-admin-state-enable.xml
-    - cat pm/ptp-pm-state-disable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-disable.xml
-    - cat pm/ptp-pm-state-enable.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/ptp-pm-state-enable.xml
-    - cat pm/get-global-config.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-global-config.xml
-    - cat pm/get-pm-instance-autocreated.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-instance-autocreated.xml
-    - cat pm/get-pm.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm.xml
-    - cat pm/get-pm-ethernet.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-ethernet.xml 
-    - cat netconf-console pm/get-pm-modem.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-modem.xml
-    - cat pm/get-pm-odu.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-odu.xml
-    - cat pm/get-pm-otu.xml 
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-otu.xml
-    - cat pm/get-pm-optical-power.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-pm-optical-power.xml
-    - cat pm/get-encryption-gcm-pm-instance-history.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history.xml
-    - cat pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-untimed-bin.xml
-    - cat pm/get-encryption-gcm-pm-instance-history-current-bin.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-current-bin.xml
-    - cat pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-encryption-gcm-pm-instance-history-24Hour-bin.xml
-    - cat =pm/get-ethernet-pm-history.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-ethernet-pm-history.xml
-    - cat pm/get-optical-power-history-24-hours.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml
-    - cat pm/otu-pm-history.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml
-  allow_failure: true
 
 Port:
   stage: test
@@ -125,18 +70,6 @@ Port:
     - cat port/getPort.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=port/getPort.xml
 
-Alarms:
-  stage: test
-  script:
-    - cat alarm/get-alarms.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarms.xml
-    - cat netconf-console alarm/get-alarm-active.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-active.xml
-    - cat alarm/get-alarm-history.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-history.xml
-    - cat alarm/get-alarm-statistics.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-statistics.xml
-  allow_failure: true
 
 XCVR: 
   stage: test
@@ -154,13 +87,4 @@ Loopback:
     - cat loopback/get-loopback.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=loopback/get-loopback.xml
 
-Maintenance:
-  stage: test
-  script:
-    - cat maintenance/system-state-dump.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/system-state-dump.xml
-    - cat maintenance/system-xftp.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/system-xftp.xml
-    - cat maintenance/configuration-backup.xml
-    - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/configuration-backup.xml
-  allow_failure: true
+
