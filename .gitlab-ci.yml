@@ -74,6 +74,7 @@ LampTest:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-disable.xml
     - cat system/lamp-test/lamptest-slot-enable.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=system/lamp-test/lamptest-slot-enable.xml
+  allow_failure: true
 
 PMs:
   stage: test
@@ -116,6 +117,7 @@ PMs:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/get-optical-power-history-24-hours.xml
     - cat pm/otu-pm-history.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=pm/otu-pm-history.xml
+  allow_failure: true
 
 Port:
   stage: test
@@ -134,6 +136,7 @@ Alarms:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-history.xml
     - cat alarm/get-alarm-statistics.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=alarm/get-alarm-statistics.xml
+  allow_failure: true
 
 XCVR: 
   stage: test
@@ -160,3 +163,4 @@ Maintenance:
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/system-xftp.xml
     - cat maintenance/configuration-backup.xml
     - netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=maintenance/configuration-backup.xml
+  allow_failure: true
