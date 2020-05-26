@@ -343,3 +343,10 @@ netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW
 # Warm Restart Waveserver Ai
 netconf-console --host=$NETCONF_HOST --user=$NETCONF_USER --password=$NETCONF_PW --port=830 --rpc=module/module-warm-restart.xml > output/restart.xml
 ```
+
+## apt installs
+
+```
+sudo apt-get install libncurses5-dev python3-lxml build-essential python3-dev
+```
+
